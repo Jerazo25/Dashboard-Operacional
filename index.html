@@ -249,7 +249,7 @@ select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(2
 <div id="uploadStatus" class="upload-status ok" style="display: none;"></div>
 <div class="main">
   <div class="nav-tabs">
-    <button class="tab" onclick="showTab('resumen')">Resumen</button>
+    <button class="tab active" onclick="showTab('resumen')">Resumen</button>
     <button class="tab" onclick="showTab('conduccion')">% Conducción</button>
     <button class="tab" onclick="showTab('perdidas')">Pérdidas</button>
     <button class="tab" onclick="showTab('hhee')">Horas Extra</button>
@@ -257,11 +257,11 @@ select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(2
     <button class="tab t-rank" onclick="showTab('ranking')">🏆 Ranking</button>
     <button class="tab t-alerta" onclick="showTab('alerta')">⚠️ Alerta</button>
     <button class="tab t-term" onclick="showTab('terminal')">🔍 Por Terminal</button>
-    <button class="tab t-dif active" onclick="showTab('programacion')" style="background:rgba(20,184,166,.12);color:#2E93A3;border:1px solid rgba(20,184,166,.3)">📋 Programación</button>
+    <button class="tab t-dif" onclick="showTab('programacion')" style="background:rgba(20,184,166,.12);color:#2E93A3;border:1px solid rgba(20,184,166,.3)">📋 Programación</button>
   </div>
 
   <!-- ===== RESUMEN ===== -->
-  <div id="tab-resumen" class="panel">
+  <div id="tab-resumen" class="panel active">
     <div class="kpi-row">
       <div class="kpi" style="--kc:var(--accent)"><div class="kpi-lbl">% Conducción Prom.</div><div class="kpi-val" id="kv-pct">69.8%</div><div class="kpi-sub">Todos los terminales</div></div>
       <div class="kpi" style="--kc:var(--red)"><div class="kpi-lbl">Total Pérdidas</div><div class="kpi-val" id="kv-perd">1.505</div><div class="kpi-sub">Salidas perdidas</div></div>
@@ -460,7 +460,7 @@ select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(2
 </div>
 
 <!-- PROGRAMACION -->
-<div id="tab-programacion" class="panel active">
+<div id="tab-programacion" class="panel">
   <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--bg2);border:1px solid rgba(20,184,166,.35);border-radius:11px;padding:11px 15px;margin-bottom:16px">
     <span style="font-family:var(--mono);font-size:10px;color:#2E93A3;letter-spacing:1.5px">FECHA:</span>
     <select id="progDateSel" style="min-width:160px"><option value="2026-07-06">lun 6/7/2026</option><option value="2026-07-07">mar 7/7/2026</option><option value="2026-07-08">mié 8/7/2026</option><option value="2026-07-09">jue 9/7/2026</option><option value="2026-07-10">vie 10/7/2026</option></select>
